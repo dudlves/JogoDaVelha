@@ -1,0 +1,83 @@
+* {
+  font-family: 'Rhodium Libre', serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #242422;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(228, 220, 220);
+  background-color: black;
+  border-radius: 25px;
+  margin: 20px auto;
+  padding: 10px 0;
+  width: 600px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  border-radius: 25px;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+#tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+  overflow: hidden;
+  gap: 0; /* remove espaço entre os botões */
+}
+
+#tabuleiro button {
+  background-color: black;
+  color: #860d01;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border: none;
+}
+
+#reset-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 15px;
+  background-color: #860d01;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Bordas internas para formar o tabuleiro */
+#tabuleiro button:nth-child(-n+6) {
+  border-bottom: 4px solid #860d01;
+}
+#tabuleiro button:nth-child(3n+1),
+#tabuleiro button:nth-child(3n+2) {
+  border-right: 4px solid #860d01;
+}
